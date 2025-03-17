@@ -1,107 +1,129 @@
-/* General Styling */
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9;
+    background: #f7f7f7;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 15px 30px -5px;
+  }
+  
+  /* Headings */
+  h1, h2 {
     text-align: center;
-}
-
-/* Centered Container */
-.container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-/* Headers */
-h1 {
-    color: #333;
     margin-bottom: 20px;
-}
-
-h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-    display: inline-block;
-}
-
-/* Input Group */
-.input-group {
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-label {
-    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Input Groups */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
     display: block;
+    font-weight: 600;
     margin-bottom: 5px;
-}
-
-input, textarea {
+  }
+  
+  .input-group input,
+  .input-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-/* Error Messages */
-.error-message {
-    color: red;
-    font-size: 12px;
-    display: none;
-}
-
-/* Button */
-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Table */
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 12px;
     border: 1px solid #ddd;
-    text-align: center;
-}
-
-th {
-    background-color: #007bff;
-    color: white;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
-
-/* Summary */
-#summary {
-    background: #e9ecef;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus,
+  .input-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Basic Button Style */
+  button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Copy button success state */
+  .copy-success {
+    background-color: #28a745 !important;
+  }
+  
+  /* Error Messages */
+  .error-message {
+    color: #d9534f;
+    font-size: 0.9em;
+    display: none;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ddd;
     padding: 10px;
-    margin-top: 15px;
-    border-radius: 5px;
     text-align: left;
-    font-size: 14px;
-}
+  }
+  
+  /* Animations */
+  .fade-in {
+    animation: fadeIn 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .shake {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  
