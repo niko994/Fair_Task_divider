@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Task Divider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fair Task Divider</h1>
+
+        <div class="input-group">
+            <label for="employeeNames">Employee Names (comma-separated):</label>
+            <input type="text" id="employeeNames" placeholder="e.g., Alice, Bob, Charlie">
+            <small class="error-message" id="employeeError"></small>
+        </div>
+
+        <div class="input-group">
+            <label for="taskInput">Tasks (one per line or space-separated):</label>
+            <textarea id="taskInput" rows="6" placeholder="Task1&#10;Task2&#10;Task3"></textarea>
+            <small class="error-message" id="taskError"></small>
+        </div>
+
+        <button id="divideButton">Divide Tasks</button>
+
+        <h2>Task Assignments</h2>
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Assigned Employee</th>
+                </tr>
+            </thead>
+            <tbody id="resultBody"></tbody>
+        </table>
+
+        <h2>Summary</h2>
+        <div id="summary"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
